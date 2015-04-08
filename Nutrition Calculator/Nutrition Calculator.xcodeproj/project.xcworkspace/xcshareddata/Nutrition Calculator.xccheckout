@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C505C251-E334-473A-B316-C145526D79F5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Nutrition Calculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2D0609726023947DE7AE08C713343D0D5A77FAB8</key>
+		<string>https://github.com/HawaiianPassion/nutrition_calculator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Nutrition Calculator/Nutrition Calculator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2D0609726023947DE7AE08C713343D0D5A77FAB8</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/HawaiianPassion/nutrition_calculator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2D0609726023947DE7AE08C713343D0D5A77FAB8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2D0609726023947DE7AE08C713343D0D5A77FAB8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>nutrition_calculator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
