@@ -43,12 +43,6 @@
 
 
 
-- (CGFloat)calculateBMR{
-    return _heightChoice + _weightChoice + _ageChoice;
-}
-
-
-
 //------------------------ UIPickerViewDataSourceDelegate REQUIRED Methods -------------------------------//
 
 
@@ -134,7 +128,7 @@
 
 
 
-//------------------------ UIPickerViewDelegate OPTIONAL Methods -----------------------------------------//
+//------------------------ UIPickerViewDelegate Methods -------------------------------------------------//
 
 
 // The data to return for the row and component (column) that's being passed in
@@ -207,16 +201,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)continueButton:(id)sender {
-}
-
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toSecondPage"]) {
-        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         FactorMeasurementsViewController *destViewController = segue.destinationViewController;
         destViewController.heightChoice = _heightChoice;
+        destViewController.weightChoice = _weightChoice;
+        destViewController.ageChoice = _ageChoice;
     }
 }
 @end

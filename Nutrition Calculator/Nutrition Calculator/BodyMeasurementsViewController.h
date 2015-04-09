@@ -19,13 +19,10 @@
 @property (strong, nonatomic) IBOutlet UIPickerView *agePicker;
 
 
-- (IBAction)continueButton:(id)sender;
-
 @property CGFloat heightChoice;
 @property CGFloat weightChoice;
 @property NSInteger ageChoice;
 
--(CGFloat)calculateBMR;
 
 @end
 
