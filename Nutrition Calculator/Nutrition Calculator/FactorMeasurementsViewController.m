@@ -24,9 +24,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    genderPickerData = @[@"male", @"female"];
+    
+    // create the arrays to populate the UIPickerViews
+    genderPickerData = @[@"Male", @"Female"];
+    
     activityLevelPickerData = @[@"Sedentary", @"Very Light Activity", @"Light Activity", @"Moderate Activity", @"Heavy Activity", @"Extreme Activity"];
+    
     goalPickerData = @[@"Extreme Cut", @"Cut", @"Maintain", @"Bulk", @"Extreme Bulk"];
+    
     ratioPickerData = @[@"0.8g Protein / lb. Body Weight", @"1.0g Protein / lb. Body Weight", @"1.25g Protein / lb. Body Weight", @"1.5g Protein / lb. Body Weight"];
     
 }
@@ -36,7 +41,7 @@
 
 // returns the number of 'columns' to display.
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
+    return 1; // There is only 1 column of choices for each of these Picker Views
 }
 
 // returns the # of rows in each component.
@@ -65,46 +70,103 @@
 //------------------------ UIPickerViewDelegate Methods -------------------------------------------------//
 
 // The data to return for the row and component (column) that's being passed in
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     if (pickerView == _genderPicker){
-     //   NSLog(@"initiating genderPicker");
         return genderPickerData[row];
     }
     else if (pickerView == _goalPicker){
-        NSLog(@"initiating goalPicker");
         return goalPickerData[row];
     }
     else if (pickerView == _activityLevelPicker){
-     //   NSLog(@"initiating acitivyLevelPicker");
         return activityLevelPickerData[row];
     }
     else if (pickerView == _ratioPicker){
-     //   NSLog(@"initiating ratioPicker");
         return ratioPickerData[row];
     }
     return @"blank";
 }
 
 
-//- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
-//    if (pickerView == _ratioPicker){
-//     return 700;
-//    }
-//    return 400;
-//}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
 
-//- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
-//    if (pickerView == _ratioPicker){
-//        return 200;
-//    }
-//    return 100;
-//}
+    if (pickerView == _genderPicker){
+        _genderChoice = genderPickerData[row];
+        //genderPickerData[[_genderPicker selectedRowInComponent:0]];
+        NSLog(@"%@",_genderChoice);
+    }
+    else if (pickerView == _goalPicker){
+        switch (row) {
+            case 0:
+                _goalChoice = -.20;
+                break;
+            case 1:
+                _goalChoice = -.10;
+                break;
+            case 2:
+                _goalChoice = 0.0;
+                break;
+            case 3:
+                _goalChoice = .10;
+                break;
+            case 4:
+                _goalChoice = .20;
+                break;
+                
+            default:
+                break;
+        }
+         NSLog(@"goal factor = %f", _goalChoice);
+    }
+    else if (pickerView == _activityLevelPicker){
+        switch (row) {
+            case 0:
+                _activityLevelChoice = 1.0;
+                break;
+            case 1:
+                _activityLevelChoice = 1.2;
+                break;
+            case 2:
+                _activityLevelChoice = 1.4;
+                break;
+            case 3:
+                _activityLevelChoice = 1.6;
+                break;
+            case 4:
+                _activityLevelChoice = 1.8;
+                break;
+            case 5:
+                _activityLevelChoice = 2.0;
+                break;
+                
+            default:
+                break;
+        }
+         NSLog(@"activity factor = %f", _activityLevelChoice);
+    }
+    else if (pickerView == _ratioPicker){
+        switch (row) {
+            case 0:
+                _ratioChoice = 0.8;
+                break;
+            case 1:
+                _ratioChoice = 1.0;
+                break;
+            case 2:
+                _ratioChoice = 1.25;
+                break;
+            case 3:
+                _ratioChoice = 1.5;
+                break;
 
+                
+            default:
+                break;
+        }
+         NSLog(@"ratio factor = %f", _ratioChoice);
+    }
 
-//- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-//
-//}
+}
+
 //-------------------------------------------------------------------------------------------------------//
 
 

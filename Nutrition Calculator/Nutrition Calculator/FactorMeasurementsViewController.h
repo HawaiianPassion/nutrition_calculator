@@ -16,17 +16,16 @@
 @property NSInteger ageChoice;
 
 // new properties
-@property NSString* gender;
-@property NSString* activityLevel;
-@property NSString* goal;
-@property NSString* proteinRatio;
+@property NSString* genderChoice;
+@property CGFloat activityLevelChoice;
+@property CGFloat goalChoice;
+@property CGFloat ratioChoice;
 
-// UIPickerViews
+//--- UIPickerViews -----------------------------------------------//
 @property (strong, nonatomic) IBOutlet UIPickerView *genderPicker;
 @property (strong, nonatomic) IBOutlet UIPickerView *goalPicker;
 @property (strong, nonatomic) IBOutlet UIPickerView *activityLevelPicker;
 @property (strong, nonatomic) IBOutlet UIPickerView *ratioPicker;
-
-
+//----------------------------------------------------------------//
 
 @end

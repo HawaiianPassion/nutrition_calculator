@@ -23,6 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
+    // create the arrays to populate the UIPickerViews
     heightPickerData = @[@[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"],
                          @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"],
                          @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"],
@@ -46,6 +47,7 @@
 //------------------------ UIPickerViewDataSourceDelegate REQUIRED Methods -------------------------------//
 
 
+// returns the number of 'columns' to display.
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     if (pickerView == _heightPicker){
             return heightPickerData.count;
@@ -61,6 +63,7 @@
 
 
 
+// returns the # of rows in each component.
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     if (pickerView == _heightPicker){
         switch (component) {
@@ -148,24 +151,28 @@
 }
 
 
-
+// The set width for each column in a PickerView
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
     return 25;
 }
 
 
 
-
+// Defines what will happen when a value is changed in any of the Picker Views
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     NSLog(@"selected row %ld", (long)row);
     
     if (pickerView == _heightPicker){
+
+        // Save all of the selected row values for each column
         NSInteger firstCompRow = [_heightPicker selectedRowInComponent:0];
         NSInteger secondCompRow = [_heightPicker selectedRowInComponent:1];
         NSInteger thirdCompRow = [_heightPicker selectedRowInComponent:2];
         NSInteger fifthCompRow = [_heightPicker selectedRowInComponent:4];
         NSInteger sixthCompRow = [_heightPicker selectedRowInComponent:5];
         
+        
+        // Construct the appropriate value for the picker using its component values
         _heightChoice = firstCompRow*100 + secondCompRow*10 + thirdCompRow + fifthCompRow*.1 + sixthCompRow*.01;
         NSLog(@"height value = %f", _heightChoice);
     }
@@ -203,9 +210,14 @@
 
 
 #pragma mark - Navigation
+// called when a segue is triggered.  does initial setup just before moving to another storyboard scene
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toSecondPage"]) {
+        
+        // create an instance of the next (destination) view controller
         FactorMeasurementsViewController *destViewController = segue.destinationViewController;
+        
+        // pass the current values of the pickers to the destination view controller
         destViewController.heightChoice = _heightChoice;
         destViewController.weightChoice = _weightChoice;
         destViewController.ageChoice = _ageChoice;
