@@ -15,6 +15,9 @@
 		13DD0C5C1ACF8128001475E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13DD0C5A1ACF8128001475E2 /* LaunchScreen.xib */; };
 		13DD0C681ACF8128001475E2 /* Nutrition_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DD0C671ACF8128001475E2 /* Nutrition_CalculatorTests.m */; };
 		13DD0C741AD5074B001475E2 /* FactorMeasurementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DD0C731AD5074B001475E2 /* FactorMeasurementsViewController.m */; };
+		13DD0C771AD9E498001475E2 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DD0C761AD9E498001475E2 /* ResultsViewController.m */; };
+		13DD0C841AE068A8001475E2 /* LaunchScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DD0C821AE068A8001475E2 /* LaunchScreen@2x.png */; };
+		13DD0C851AE068A8001475E2 /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DD0C831AE068A8001475E2 /* LaunchScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,10 @@
 		13DD0C671ACF8128001475E2 /* Nutrition_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrition_CalculatorTests.m; sourceTree = "<group>"; };
 		13DD0C721AD5074B001475E2 /* FactorMeasurementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactorMeasurementsViewController.h; sourceTree = "<group>"; };
 		13DD0C731AD5074B001475E2 /* FactorMeasurementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactorMeasurementsViewController.m; sourceTree = "<group>"; };
+		13DD0C751AD9E498001475E2 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		13DD0C761AD9E498001475E2 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		13DD0C821AE068A8001475E2 /* LaunchScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchScreen@2x.png"; sourceTree = "<group>"; };
+		13DD0C831AE068A8001475E2 /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +93,12 @@
 			children = (
 				13DD0C4F1ACF8128001475E2 /* AppDelegate.h */,
 				13DD0C501ACF8128001475E2 /* AppDelegate.m */,
-				13DD0C721AD5074B001475E2 /* FactorMeasurementsViewController.h */,
-				13DD0C731AD5074B001475E2 /* FactorMeasurementsViewController.m */,
 				13DD0C521ACF8128001475E2 /* BodyMeasurementsViewController.h */,
 				13DD0C531ACF8128001475E2 /* BodyMeasurementsViewController.m */,
+				13DD0C721AD5074B001475E2 /* FactorMeasurementsViewController.h */,
+				13DD0C731AD5074B001475E2 /* FactorMeasurementsViewController.m */,
+				13DD0C751AD9E498001475E2 /* ResultsViewController.h */,
+				13DD0C761AD9E498001475E2 /* ResultsViewController.m */,
 				13DD0C551ACF8128001475E2 /* Main.storyboard */,
 				13DD0C581ACF8128001475E2 /* Images.xcassets */,
 				13DD0C5A1ACF8128001475E2 /* LaunchScreen.xib */,
@@ -101,6 +110,8 @@
 		13DD0C4B1ACF8127001475E2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				13DD0C821AE068A8001475E2 /* LaunchScreen@2x.png */,
+				13DD0C831AE068A8001475E2 /* LaunchScreen.png */,
 				13DD0C4C1ACF8128001475E2 /* Info.plist */,
 				13DD0C4D1ACF8128001475E2 /* main.m */,
 			);
@@ -205,8 +216,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				13DD0C571ACF8128001475E2 /* Main.storyboard in Resources */,
+				13DD0C851AE068A8001475E2 /* LaunchScreen.png in Resources */,
 				13DD0C5C1ACF8128001475E2 /* LaunchScreen.xib in Resources */,
 				13DD0C591ACF8128001475E2 /* Images.xcassets in Resources */,
+				13DD0C841AE068A8001475E2 /* LaunchScreen@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +241,7 @@
 				13DD0C541ACF8128001475E2 /* BodyMeasurementsViewController.m in Sources */,
 				13DD0C511ACF8128001475E2 /* AppDelegate.m in Sources */,
 				13DD0C4E1ACF8128001475E2 /* main.m in Sources */,
+				13DD0C771AD9E498001475E2 /* ResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Nutrition Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Nutrition Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,6 +436,7 @@
 				13DD0C6D1ACF8128001475E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13DD0C6E1ACF8128001475E2 /* Build configuration list for PBXNativeTarget "Nutrition CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +445,7 @@
 				13DD0C701ACF8128001475E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

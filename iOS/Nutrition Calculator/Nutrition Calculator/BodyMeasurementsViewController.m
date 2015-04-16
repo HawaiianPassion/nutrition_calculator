@@ -22,6 +22,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    _heightChoice = 0;
+    _weightChoice = 0;
+    _ageChoice = 0;
+    
     
     // create the arrays to populate the UIPickerViews
     heightPickerData = @[@[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"],

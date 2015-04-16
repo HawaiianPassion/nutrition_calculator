@@ -7,6 +7,7 @@
 //
 
 #import "FactorMeasurementsViewController.h"
+#import "ResultsViewController.h"
 
 @interface FactorMeasurementsViewController (){
     NSArray *genderPickerData;
@@ -23,6 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _genderChoice = @"Male";
+    _activityLevelChoice = 1.0;
+    _goalChoice = -.20;
+    _ratioChoice = 0.8;
     
     
     // create the arrays to populate the UIPickerViews
@@ -179,11 +185,27 @@
 
 //#pragma mark - Navigation
 
-//// In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//}
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"toThirdPage"]) {
+        
+        // create an instance of the next (destination) view controller
+       ResultsViewController *destViewController = segue.destinationViewController;
+        
+        // pass the current values of the pickers to the destination view controller
+        destViewController.heightChoice = _heightChoice;
+        destViewController.weightChoice = _weightChoice;
+        destViewController.ageChoice = _ageChoice;
+        destViewController.genderChoice = _genderChoice;
+        destViewController.goalChoice = _goalChoice;
+        destViewController.activityLevelChoice = _activityLevelChoice;
+        destViewController.ratioChoice = _ratioChoice;
+    }
+    
+}
 
 
 @end

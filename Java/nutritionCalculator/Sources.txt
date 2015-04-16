@@ -1,0 +1,18 @@
+Author: Ryson Asuncion
+Date Created: June 17, 2014
+Last Updated: June 28, 2014
+
+
+Sources and Help:
+	
+1.	June 17, 2014 - Needed help on creating and implementing JFrames
+	http://docs.oracle.com/javase/tutorial/uiswing/components/frame.html
+
+2.  June 22, 2014 - Needed help on implementing formatted text fields and certain JLabel functions
+	http://docs.oracle.com/javase/tutorial/uiswing/components/formattedtextfield.html
+
+3.  June 24, 2014 - Needed help on implementing combo boxes
+	http://docs.oracle.com/javase/tutorial/uiswing/components/combobox.html
+	
+4.  June 28, 2014 - Needed help on choosing and implementing the best border option for displaying each day type.
+	http://docs.oracle.com/javase/tutorial/uiswing/components/border.html
